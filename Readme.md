@@ -67,9 +67,10 @@ GPU Version requires nvidia-docker
 1) Set environment variables
  - To enable GPU acceleration, `export GPU=1`.
  - To enable OpenCV, `export OPENCV=1`
- 
 2) Navigate to source root and run `pip3 install .` to install library.
-
+ -if errors like https://github.com/pjreddie/darknet/issues/200 copy /tmp/darknet to your directory and corect makefile.
+ -also change CUDA capability lines according to your device. 1070, 1080ti have cc 6.1
+ 
 ### Using a custom version of Darknet
 1) Set environment variable DARKNET_HOME to download location of darknet.
 2) Add DARKNET_HOME to LD_LIBRARY_PATH. `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DARKNET_HOME`
